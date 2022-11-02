@@ -1,14 +1,14 @@
 import '../../packages.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({Key? key}) : super(key: key);
 
   @override
-  _SignUpScreenState createState() => _SignUpScreenState();
+  _SignInScreenState createState() => _SignInScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
-  bool _checkboxValue = false;
+class _SignInScreenState extends State<SignInScreen> {
+  final bool _checkboxValue = false;
   bool _showPasswrd = false;
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 top: Get.height / 10,
               ),
               child: const Text(
-                "Welcome!",
+                "Welcome Back!",
                 style: TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
@@ -37,7 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               right: 50,
             ),
             child: Text(
-              "Please provide following details for your new account",
+              "Sign in to continue",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 15,
@@ -45,9 +45,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 color: Color.fromRGBO(28, 25, 57, 0.8),
               ),
             ),
-          ),
-          AuthTextField(
-            fieldName: "Full Name",
           ),
           AuthTextField(
             fieldName: "Email Address",
@@ -66,38 +63,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
               },
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: [
-              Checkbox(
-                value: _checkboxValue,
-                // fillColor: Color(0xFF7165e3).withOpacity(0.3),
-                focusColor: const Color(0xFF7165e3).withOpacity(0.3),
-                activeColor: const Color(0xFF7165e3),
-
-                onChanged: (value) {
-                  setState(() {
-                    _checkboxValue = value!;
-                  });
-                },
-              ),
-              const Expanded(
-                child: Text(
-                    "By creating your account you have to agree with our Teams and Conditions"),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 50,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20, 15, 50),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                Text("Forget Password?"),
+              ],
+            ),
           ),
           const CustomButton(
-            titleText: "Sign up my Account",
-          ),
-          CustomButton(
-            titleText: "Sign up with Phone Number",
-            color: Colors.indigo.shade900,
+            titleText: "Sign in my Account",
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 100),
@@ -105,17 +81,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Already have an account? -",
+                  "Don't have an account? -",
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 TextButton(
                   onPressed: () {
-                    Get.off(() => const SignInScreen());
+                    Get.off(() => const SignUpScreen());
                   },
                   child: const Text(
-                    "Sign in",
+                    "Sign up",
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                     ),
