@@ -17,7 +17,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           Center(
             child: Padding(
               padding: EdgeInsets.only(
-                top: Get.height / 8,
+                top: Get.height / 9,
               ),
               child: const Text(
                 "Welcome!",
@@ -80,7 +80,36 @@ class _SignUpScreenState extends State<SignUpScreen> {
           const SizedBox(
             height: 50,
           ),
-          const CustomButton(),
+          const CustomButton(
+            titleText: "Sign up my Account",
+          ),
+          CustomButton(
+            titleText: "Sign up with Phone Number",
+            color: Colors.indigo.shade900,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20, bottom: 100),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Already have an account? -",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Sign in",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

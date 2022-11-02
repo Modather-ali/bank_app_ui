@@ -1,7 +1,10 @@
 import '../../packages.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({Key? key}) : super(key: key);
+  final String titleText;
+  final Color? color;
+  const CustomButton({Key? key, required this.titleText, this.color})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +13,13 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(
-            vertical: 15,
+            vertical: 17,
           ),
+          backgroundColor: color,
+          //  shape: BorderRadius.circular(10)
         ),
         onPressed: () {},
-        child: const Text("data"),
+        child: Text(titleText),
       ),
     );
   }
