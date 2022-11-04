@@ -1,6 +1,7 @@
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';
 
+export 'screens/auth/mobile_number_register.dart';
 export 'screens/auth/sign_in.dart';
 export 'screens/auth/sign_up.dart';
 export 'screens/widgets/auth_text_field.dart';

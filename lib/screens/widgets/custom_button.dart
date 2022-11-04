@@ -3,7 +3,9 @@ import '../../packages.dart';
 class CustomButton extends StatelessWidget {
   final String titleText;
   final Color? color;
-  const CustomButton({Key? key, required this.titleText, this.color})
+  final void Function()? onPressed;
+  const CustomButton(
+      {Key? key, required this.titleText, this.color, this.onPressed})
       : super(key: key);
 
   @override
@@ -18,7 +20,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: color,
           //  shape: BorderRadius.circular(10)
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(titleText),
       ),
     );

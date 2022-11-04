@@ -92,12 +92,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
           const SizedBox(
             height: 50,
           ),
-          const CustomButton(
+          CustomButton(
             titleText: "Sign up my Account",
+            onPressed: () {},
           ),
           CustomButton(
             titleText: "Sign up with Phone Number",
             color: Colors.indigo.shade900,
+            onPressed: () {
+              Get.to(() => const MobileNumberRegisterScreen());
+            },
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 100),
