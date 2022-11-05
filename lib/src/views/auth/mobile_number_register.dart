@@ -4,14 +4,13 @@ class MobileNumberRegisterScreen extends StatefulWidget {
   const MobileNumberRegisterScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MobileNumberRegisterScreenState createState() =>
       _MobileNumberRegisterScreenState();
 }
 
 class _MobileNumberRegisterScreenState
     extends State<MobileNumberRegisterScreen> {
-  final bool _checkboxValue = false;
-  final bool _showPasswrd = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +109,9 @@ class _MobileNumberRegisterScreenState
           ),
           CustomButton(
             titleText: "Send Code",
-            onPressed: () {},
+            onPressed: () {
+              Get.offAll(() => const VerifyAccountScreen());
+            },
           ),
         ],
       ),

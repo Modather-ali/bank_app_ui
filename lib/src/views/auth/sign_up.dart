@@ -4,12 +4,13 @@ class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SignUpScreenState createState() => _SignUpScreenState();
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
   bool _checkboxValue = false;
-  bool _showPasswrd = false;
+  bool _showPassword = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,14 +55,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           AuthTextField(
             fieldName: "Password",
-            obscureText: _showPasswrd,
+            obscureText: _showPassword,
             suffixIcon: InkWell(
-              child: _showPasswrd
+              child: _showPassword
                   ? const Icon(Icons.visibility)
                   : const Icon(Icons.visibility_off),
               onTap: () {
                 setState(() {
-                  _showPasswrd = !_showPasswrd;
+                  _showPassword = !_showPassword;
                 });
               },
             ),

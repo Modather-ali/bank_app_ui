@@ -35,6 +35,7 @@ class _AuthTextFieldState extends State<AuthTextField> {
 
   @override
   void initState() {
+    super.initState();
     _focusNode.addListener(() {
       if (_focusNode.hasFocus) {
         setState(() {
