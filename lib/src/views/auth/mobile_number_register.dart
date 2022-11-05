@@ -1,4 +1,4 @@
-import '../../packages.dart';
+import '../../../packages.dart';
 
 class MobileNumberRegisterScreen extends StatefulWidget {
   const MobileNumberRegisterScreen({Key? key}) : super(key: key);
@@ -51,6 +51,7 @@ class _MobileNumberRegisterScreenState
           Container(
             height: 50,
             margin: const EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.only(left: 10),
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
@@ -66,17 +67,42 @@ class _MobileNumberRegisterScreenState
                     color: Color(0xFFA7A9AF),
                   )
                 ]),
-            child: TextField(
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(
-                    width: 0,
-                    style: BorderStyle.none,
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: CountryPhoneCodePicker.withDefaultSelectedCountry(
+                    defaultCountryCode: Country(
+                      name: 'Sudan',
+                      countryCode: 'SD',
+                      phoneCode: '+249',
+                    ),
+                    showPhoneCode: true,
+                    borderRadius: 5,
+                    borderWidth: 0,
+                    borderColor: Colors.transparent,
+                    flagBorderRadius: 0,
+                    style: const TextStyle(fontSize: 16),
+                    searchBarHintText: 'Search by name',
+                    // border: Border( ),
                   ),
                 ),
-              ),
+                Expanded(
+                  flex: 7,
+                  child: TextField(
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(
+                          width: 0,
+                          style: BorderStyle.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(

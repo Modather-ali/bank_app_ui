@@ -1,4 +1,4 @@
-import '../../packages.dart';
+import '../../../packages.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
