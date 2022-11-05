@@ -22,10 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               child: const Text(
                 "Welcome Back!",
-                style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: titleStyle,
               ),
             ),
           ),
@@ -39,11 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Text(
               "Sign in to continue",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w300,
-                color: Color.fromRGBO(28, 25, 57, 0.8),
-              ),
+              style: normalStyle,
             ),
           ),
           AuthTextField(
@@ -72,8 +65,9 @@ class _SignInScreenState extends State<SignInScreen> {
               ],
             ),
           ),
-          const CustomButton(
+          CustomButton(
             titleText: "Sign in my Account",
+            onPressed: () {},
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20, bottom: 100),

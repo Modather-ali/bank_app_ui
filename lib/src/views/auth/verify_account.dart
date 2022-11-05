@@ -49,6 +49,12 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
             ),
           ),
           const Padding(
+            padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+            child: PinFieldAutoFill(
+              codeLength: 4,
+            ),
+          ),
+          const Padding(
             padding: EdgeInsets.symmetric(vertical: 20),
             child: Text(
               "Didn't not received the code?",
@@ -65,7 +71,7 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
             ),
           ),
           SizedBox(
-            height: Get.height * 0.3,
+            height: Get.height * 0.25,
           ),
           CustomButton(
             titleText: "Proceed",
@@ -75,8 +81,8 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
             padding: const EdgeInsets.only(
               top: 35,
               bottom: 60,
-              left: 15,
-              right: 15,
+              left: 5,
+              right: 5,
             ),
             child: Wrap(
               alignment: WrapAlignment.center,

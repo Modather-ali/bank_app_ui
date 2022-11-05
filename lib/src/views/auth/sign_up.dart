@@ -23,10 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               child: const Text(
                 "Welcome!",
-                style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: titleStyle,
               ),
             ),
           ),
@@ -40,11 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Text(
               "Please provide following details for your new account",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w300,
-                color: Color.fromRGBO(28, 25, 57, 0.8),
-              ),
+              style: normalStyle,
             ),
           ),
           AuthTextField(
@@ -99,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           CustomButton(
             titleText: "Sign up with Phone Number",
-            color: Colors.indigo.shade900,
+            color: secondaryColor,
             onPressed: () {
               Get.to(() => const MobileNumberRegisterScreen());
             },

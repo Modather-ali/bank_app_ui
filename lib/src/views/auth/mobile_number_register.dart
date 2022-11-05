@@ -23,10 +23,7 @@ class _MobileNumberRegisterScreenState
               ),
               child: const Text(
                 "Mobile Number",
-                style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: titleStyle,
               ),
             ),
           ),
@@ -40,11 +37,7 @@ class _MobileNumberRegisterScreenState
             child: Text(
               "Please enter your valid phone number. We will send you 4-digit code to verify account",
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w300,
-                color: Color.fromRGBO(28, 25, 57, 0.8),
-              ),
+              style: normalStyle,
             ),
           ),
           Container(

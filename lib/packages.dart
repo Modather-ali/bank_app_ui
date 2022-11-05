@@ -1,6 +1,7 @@
 export 'package:country_phone_code_picker/country_phone_code_picker.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';
+export 'package:sms_autofill/sms_autofill.dart';
 
 export 'src/components/auth_text_field.dart';
 export 'src/components/custom_button.dart';
