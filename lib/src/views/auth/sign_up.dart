@@ -88,7 +88,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           CustomButton(
             titleText: "Sign up my Account",
-            onPressed: () {},
+            onPressed: () {
+              Get.off(() => const AccountCreatedScreen());
+            },
           ),
           CustomButton(
             titleText: "Sign up with Phone Number",

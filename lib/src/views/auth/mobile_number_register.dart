@@ -43,7 +43,7 @@ class _MobileNumberRegisterScreenState
           Container(
             height: 50,
             margin: const EdgeInsets.symmetric(horizontal: 15),
-            padding: const EdgeInsets.only(left: 10),
+            // padding: const EdgeInsets.only(left: 10),
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
@@ -76,7 +76,6 @@ class _MobileNumberRegisterScreenState
                     flagBorderRadius: 0,
                     style: const TextStyle(fontSize: 16),
                     searchBarHintText: 'Search by name',
-                    // border: Border( ),
                   ),
                 ),
                 Expanded(
