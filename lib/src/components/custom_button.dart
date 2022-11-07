@@ -18,10 +18,13 @@ class CustomButton extends StatelessWidget {
             vertical: 17,
           ),
           backgroundColor: color,
-          //  shape: BorderRadius.circular(10)
         ),
         onPressed: onPressed,
-        child: Text(titleText),
+        child: Container(
+          width: Get.width,
+          alignment: Alignment.center,
+          child: Text(titleText),
+        ),
       ),
     );
   }

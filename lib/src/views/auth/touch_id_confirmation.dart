@@ -115,9 +115,7 @@ class _TouchIdConfirmationScreenState extends State<TouchIdConfirmationScreen> {
             titleText: "Skip This",
             color: grayColor,
             onPressed: () {
-              _containerOneSize = Get.height * 0.225;
-              _containerTwoSize = Get.height * 0.35;
-              setState(() {});
+              Get.to(() => const SetPinScreen());
             },
           ),
         ],

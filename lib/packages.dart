@@ -7,11 +7,13 @@ export 'package:sms_autofill/sms_autofill.dart';
 
 export 'src/components/auth_text_field.dart';
 export 'src/components/custom_button.dart';
+export 'src/components/pin_field.dart';
 export 'src/res/assets.dart';
 export 'src/res/colors.dart';
 export 'src/res/style.dart';
 export 'src/views/auth/account_created.dart';
 export 'src/views/auth/mobile_number_register.dart';
+export 'src/views/auth/set_pin.dart';
 export 'src/views/auth/sign_in.dart';
 export 'src/views/auth/sign_up.dart';
 export 'src/views/auth/touch_id_confirmation.dart';
