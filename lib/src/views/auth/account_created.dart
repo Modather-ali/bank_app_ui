@@ -45,7 +45,9 @@ class _AccountCreatedScreenState extends State<AccountCreatedScreen> {
           ),
           CustomButton(
             titleText: "Continue",
-            onPressed: () {},
+            onPressed: () {
+              Get.off(() => const TouchIdConfirmationScreen());
+            },
           ),
           Padding(
             padding: const EdgeInsets.only(

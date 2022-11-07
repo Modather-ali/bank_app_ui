@@ -3,7 +3,7 @@ import '/packages.dart';
 const normalStyle = TextStyle(
   fontSize: 15,
   fontWeight: FontWeight.w400,
-  color: Color.fromRGBO(28, 25, 57, 0.8),
+  color: grayColor,
 );
 
 const underLineStyle = TextStyle(
@@ -15,7 +15,7 @@ const underLineStyle = TextStyle(
 );
 
 const titleStyle = TextStyle(
-  fontSize: 35,
+  fontSize: 30,
   fontWeight: FontWeight.bold,
 );
 
