@@ -5,6 +5,7 @@ export 'package:flutter/material.dart';
 export 'package:get/get.dart';
 export 'package:sms_autofill/sms_autofill.dart';
 
+export 'src/components/activity_card.dart';
 export 'src/components/auth_text_field.dart';
 export 'src/components/custom_button.dart';
 export 'src/components/pin_field.dart';

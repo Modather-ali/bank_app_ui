@@ -20,7 +20,7 @@ const titleStyle = TextStyle(
 );
 
 const boldStyle = TextStyle(
-  fontSize: 18,
+  fontSize: 20,
   fontWeight: FontWeight.w600,
 );
 
@@ -33,4 +33,9 @@ const subtitleStyle = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w600,
   color: Colors.grey,
+);
+
+const longTextStyle = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
 );

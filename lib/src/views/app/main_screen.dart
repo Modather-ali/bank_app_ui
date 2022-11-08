@@ -23,12 +23,13 @@ class _MainScreenState extends State<MainScreen> {
                 children: [
                   Container(
                     width: Get.width,
-                    height: Get.height * 0.3,
+                    height: Get.height * 0.25,
                     color: secondaryColor,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,40 +65,204 @@ class _MainScreenState extends State<MainScreen> {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(15),
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
-                                  blurRadius: 15,
+                                  blurRadius: 10,
                                   spreadRadius: 1,
-                                  offset: Offset(4, 4),
-                                  color: Color(0xFFA7A9AF),
+                                  offset: const Offset(1, 1),
+                                  color:
+                                      const Color(0xFFA7A9AF).withOpacity(0.5),
                                 )
                               ]),
-                          child: Row(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Container(
-                                height: 10,
-                                width: 1,
-                                decoration: const BoxDecoration(
-                                  color: Colors.red,
-                                  shape: BoxShape.circle,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    _balanceDetails(
+                                      number: '1,460',
+                                      title: "Spent",
+                                      color: Colors.red,
+                                    ),
+                                    _balanceDetails(
+                                      number: '2,730',
+                                      title: 'Earned',
+                                      color: primaryColor,
+                                    ),
+                                  ],
                                 ),
                               ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              const Divider(
+                                thickness: 2,
+                                height: 0,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      'You spent \$2,732 on dining out this month Let\'s try to make it lower',
+                                    ),
+                                    Text(
+                                      'Tell me more',
+                                      style: underLineStyle,
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        const Text(
+                          'Activity',
+                          style: boldStyle,
+                        ),
+                        Row(
+                          children: const [
+                            ActivityCard(
+                              title: 'Transfer',
+                              icon: Icons.send,
+                            ),
+                            ActivityCard(
+                              title: 'My Card',
+                              icon: Icons.credit_card,
+                            ),
+                            ActivityCard(
+                              title: 'Insight',
+                              icon: Icons.bar_chart,
+                            ),
+                          ],
+                        ),
+                        const Text(
+                          'Complete Verification',
+                          style: boldStyle,
+                        ),
+                        Container(
+                          height: 400,
+                          width: Get.width,
+                          margin: const EdgeInsets.fromLTRB(0, 15, 0, 30),
+                          padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 10,
+                                  spreadRadius: 1,
+                                  offset: const Offset(1, 1),
+                                  color:
+                                      const Color(0xFFA7A9AF).withOpacity(0.5),
+                                )
+                              ]),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: const [
                                   Text(
-                                    "Spent",
-                                    style: subtitleStyle,
-                                  ),
-                                  Text(
-                                    "\$1,460",
+                                    '75%',
                                     style: titleStyle,
                                   ),
+                                  Text('7 of 10 completed'),
                                 ],
+                              ),
+                              Slider(
+                                value: 75,
+                                min: 0,
+                                max: 100,
+                                onChanged: (value) {},
+                              ),
+                              const Divider(
+                                thickness: 2,
+                              ),
+                              ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                minLeadingWidth: 0,
+                                leading: const Icon(
+                                  Icons.person,
+                                  color: primaryColor,
+                                  size: 30,
+                                ),
+                                title: const Text(
+                                  'Personal Information',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                subtitle: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      'When you register for an account, we collect personal information',
+                                      style: longTextStyle,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10),
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: const Text(
+                                          'Continue',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              const Divider(
+                                thickness: 2,
+                                endIndent: 20,
+                                indent: 20,
+                              ),
+                              const ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                minLeadingWidth: 0,
+                                leading: Icon(
+                                  Icons.person,
+                                  color: primaryColor,
+                                  size: 30,
+                                ),
+                                title: Text(
+                                  'Verification',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              const Divider(
+                                thickness: 2,
+                                endIndent: 20,
+                                indent: 20,
+                              ),
+                              const ListTile(
+                                contentPadding: EdgeInsets.zero,
+                                minLeadingWidth: 0,
+                                leading: Icon(
+                                  Icons.email,
+                                  color: primaryColor,
+                                  size: 30,
+                                ),
+                                title: Text(
+                                  'Confirm email',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -107,6 +272,36 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  _balanceDetails(
+      {required String number, required String title, required Color color}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          title,
+          style: subtitleStyle,
+        ),
+        Row(
+          children: [
+            Container(
+              height: 10,
+              width: 10,
+              margin: const EdgeInsets.only(right: 10),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: color,
+              ),
+            ),
+            Text(
+              "\$$number",
+              style: titleStyle,
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

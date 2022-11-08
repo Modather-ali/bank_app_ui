@@ -109,7 +109,9 @@ class _TouchIdConfirmationScreenState extends State<TouchIdConfirmationScreen> {
           ),
           CustomButton(
             titleText: "Activate Now",
-            onPressed: () {},
+            onPressed: () {
+              Get.offAll(() => const MainScreen());
+            },
           ),
           CustomButton(
             titleText: "Skip This",
