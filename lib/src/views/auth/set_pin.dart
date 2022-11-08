@@ -120,14 +120,12 @@ class _SetPinScreenState extends State<SetPinScreen> {
               ),
             ),
           ),
-          // SizedBox(
-          //   height: Get.height * 0.10,
-          // ),
           const Spacer(),
           CustomButton(
             titleText: "Save PIN",
             onPressed: () {
               print(_pinFieldData);
+              Get.offAll(() => const MainScreen());
             },
           ),
           const SizedBox(

@@ -17,10 +17,13 @@ class MyApp extends StatelessWidget {
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF7165e3),
         ),
-        appBarTheme: const AppBarTheme(elevation: 0),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          backgroundColor: secondaryColor,
+        ),
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const SignUpScreen(),
+      home: const MainScreen(),
     );
   }
 }

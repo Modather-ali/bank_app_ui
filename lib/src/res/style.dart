@@ -29,8 +29,8 @@ const errorStyle = TextStyle(
   color: Colors.red,
 );
 
-const smallHintStyle = TextStyle(
-  fontSize: 11,
+const subtitleStyle = TextStyle(
+  fontSize: 12,
   fontWeight: FontWeight.w600,
   color: Colors.grey,
 );

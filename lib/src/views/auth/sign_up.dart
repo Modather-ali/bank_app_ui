@@ -94,7 +94,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           CustomButton(
             titleText: "Sign up with Phone Number",
-            color: secondaryColor,
+            color: deepColor,
             onPressed: () {
               Get.to(() => const MobileNumberRegisterScreen());
             },

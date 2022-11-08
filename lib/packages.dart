@@ -11,6 +11,7 @@ export 'src/components/pin_field.dart';
 export 'src/res/assets.dart';
 export 'src/res/colors.dart';
 export 'src/res/style.dart';
+export 'src/views/app/main_screen.dart';
 export 'src/views/auth/account_created.dart';
 export 'src/views/auth/mobile_number_register.dart';
 export 'src/views/auth/set_pin.dart';
