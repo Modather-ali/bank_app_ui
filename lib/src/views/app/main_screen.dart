@@ -125,16 +125,19 @@ class _MainScreenState extends State<MainScreen> {
                           style: boldStyle,
                         ),
                         Row(
-                          children: const [
+                          children: [
                             ActivityCard(
                               title: 'Transfer',
                               icon: Icons.send,
+                              onTap: () {
+                                Get.to(() => const TransferScreen());
+                              },
                             ),
-                            ActivityCard(
+                            const ActivityCard(
                               title: 'My Card',
                               icon: Icons.credit_card,
                             ),
-                            ActivityCard(
+                            const ActivityCard(
                               title: 'Insight',
                               icon: Icons.bar_chart,
                             ),
@@ -229,7 +232,7 @@ class _MainScreenState extends State<MainScreen> {
                                 contentPadding: EdgeInsets.zero,
                                 minLeadingWidth: 0,
                                 leading: Icon(
-                                  Icons.person,
+                                  Icons.credit_card,
                                   color: primaryColor,
                                   size: 30,
                                 ),
