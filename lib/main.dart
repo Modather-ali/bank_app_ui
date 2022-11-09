@@ -1,6 +1,10 @@
+import 'package:flutter/services.dart';
+
 import 'packages.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
           backgroundColor: secondaryColor,
         ),
-        scaffoldBackgroundColor: Colors.white,
+        // scaffoldBackgroundColor: Colors.white,
       ),
       home: const MainScreen(),
     );
