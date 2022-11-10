@@ -133,9 +133,12 @@ class _MainScreenState extends State<MainScreen> {
                                 Get.to(() => const TransferScreen());
                               },
                             ),
-                            const ActivityCard(
+                            ActivityCard(
                               title: 'My Card',
                               icon: Icons.credit_card,
+                              onTap: () {
+                                Get.to(() => const CardDetailsScreen());
+                              },
                             ),
                             const ActivityCard(
                               title: 'Insight',

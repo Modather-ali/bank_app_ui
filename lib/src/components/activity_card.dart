@@ -34,8 +34,8 @@ class ActivityCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                height: 50,
-                width: 50,
+                height: 45,
+                width: 45,
                 decoration: BoxDecoration(
                   color: primaryColor,
                   borderRadius: BorderRadius.circular(10),

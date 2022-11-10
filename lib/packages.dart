@@ -16,6 +16,7 @@ export 'src/models/contact.dart';
 export 'src/res/assets.dart';
 export 'src/res/colors.dart';
 export 'src/res/style.dart';
+export 'src/views/app/card_details.dart';
 export 'src/views/app/main_screen.dart';
 export 'src/views/app/transfer.dart';
 export 'src/views/auth/account_created.dart';
