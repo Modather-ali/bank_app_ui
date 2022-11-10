@@ -30,9 +30,8 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        // scaffoldBackgroundColor: Colors.white,
       ),
-      home: const MainScreen(),
+      home: const SignUpScreen(),
     );
   }
 }
