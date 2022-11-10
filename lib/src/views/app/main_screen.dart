@@ -52,9 +52,14 @@ class _MainScreenState extends State<MainScreen> {
                                 ),
                               ],
                             ),
-                            const Icon(
-                              Icons.person,
-                              color: Colors.white,
+                            InkWell(
+                              onTap: () {
+                                Get.to(() => const MyAccountScreen());
+                              },
+                              child: const Icon(
+                                Icons.person,
+                                color: Colors.white,
+                              ),
                             ),
                           ],
                         ),
